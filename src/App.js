@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import NewsPage from "./Pages/NewsPage/NewsPage";
 function App() {
   return (
     <div className="App">
+      <NewsPage />
     </div>
   );
 }
