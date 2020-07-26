@@ -1,0 +1,11 @@
+.searchBar{
+    padding: 10px;
+    border-radius: 5px;
+    width: 35%;
+    border: 2px solid orange;
+}
+.searchBarWrapper{
+    display: flex;
+    justify-content: center;
+    padding : 20px;
+}

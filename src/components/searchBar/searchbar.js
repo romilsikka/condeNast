@@ -1,25 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import './SearchBar.css';
 export default function Search(props) {
-  const [state, setState] = useState({
-      data:{},
-      keyWord:""
-  });
-  const handleSearch = (e) => {
-    fetch(
-      `https://newsapi.org/v2/everything?q=${e.target.value}&apiKey=${process.env.REACT_APP_KEY}`
-    )
-      .then((response) => response.json())
-      .then((data) =>
-        setState({
-          ...state,
-          data,
-        })
-      );
-  };
+
   return (
-    <div className="searchBar">
-      <input type="text" onChange={handleSearch} />
-      <button onClick={handleSearch}>Search</button>
+    <div className="searchBarWrapper">
+      <input className="searchBar" type="text" onChange={(e)=>props.saveKeywords(e)} />
     </div>
   );
 }

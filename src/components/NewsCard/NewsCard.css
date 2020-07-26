@@ -1,0 +1,36 @@
+.newsContentCard{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    
+}
+
+.titlecard{
+
+}
+.description{
+
+}
+
+.image{
+ height: 140px;
+ cursor: pointer;
+}
+
+.NewsCard{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    transform: scale(1);
+    transition: all 0.5s ease-in;
+}
+.NewsCard:hover{
+   background-color: #eee;
+   translate: scale(1.05);
+}
