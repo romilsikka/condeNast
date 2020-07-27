@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "../../Components/Header/Header";
 import SearchBar from "../../Components/SearchBar/SearchBar";
-import NewsContent from "../../Components/NewsContent/NewContent";
+import NewsContent from "../../Components/NewsContent/NewsContent";
 import Footer from "../../Components/Footer/Footer";
 import { fetchTopHeadlines } from "../../utils";
 import "./NewsPage.css";
@@ -69,14 +69,14 @@ class NewsPage extends Component {
   };
 
   render() {
-    console.log(this.state);
+    const {keyWords,data} = this.state;
     return (
       <div className="NewsPage">
-        <Header title={this.state.keyWords} />
+        <Header title={keyWords} />
         <SearchBar saveKeywords={this.handleKeywords} />
         <NewsContent
-          newsData={this.state.data && this.state.data.articles}
-          title={this.state.keyWords}
+          newsData={data && data.articles}
+          title={keyWords}
         />
         <Footer />
       </div>

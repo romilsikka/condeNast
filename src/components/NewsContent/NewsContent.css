@@ -1,8 +1,13 @@
 .NewsContent{
+min-height: 65vh;
 display: flex;
 flex-direction: column;
 align-items: center;
-min-height: 65vh;
+}
+.newsIteration{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .loader {
     border: 16px solid #f3f3f3;
