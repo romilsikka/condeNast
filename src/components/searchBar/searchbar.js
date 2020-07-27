@@ -4,7 +4,7 @@ export default function Search(props) {
 
   return (
     <div className="searchBarWrapper">
-      <input className="searchBar" type="text" onChange={(e)=>props.saveKeywords(e)} />
+      <input className="searchBar" type="text" onKeyUp={(e)=>props.saveKeywords(e)} />
     </div>
   );
 }

@@ -11,10 +11,10 @@ export default function NewsContent(props) {
       </>
     );
   };
-  console.log(props.newsData)
   return (
     <div className="NewsContent">
-      <h2>NewsContent</h2>
+      <h2>{props.title ? "news Content":"Top Trending News"}</h2>
+      {!props.newsData && <div className="loader"></div> }
       {newsIteration()}
     </div>
   );

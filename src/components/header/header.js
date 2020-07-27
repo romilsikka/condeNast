@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Header.css'
 export default function Header(props) {
   return (
@@ -6,4 +7,11 @@ export default function Header(props) {
       <h1>{props.title.length >=3 ? `Showing news for ${props.title}`: 'Header'}</h1>
     </div>
   );
+}
+
+Header.propTypes = {
+  title: PropTypes.string
+};
+Header.defaultProps = {
+  title: "",
 }
